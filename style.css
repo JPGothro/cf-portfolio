@@ -84,6 +84,9 @@ li {
 hr {
   width: 80%;
 }
+footer {
+	float: right;
+}
 .hamburger img {
   width: 2em;
   float: right;
