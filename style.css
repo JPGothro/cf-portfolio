@@ -84,6 +84,9 @@ li {
 hr {
   width: 80%;
 }
+footer {
+	float: right;
+}
 .hamburger img {
   width: 2em;
   float: right;
@@ -98,11 +101,18 @@ hr {
   padding: 20px;
   text-align: center;
 }
-
+.main-nav {
+	padding: 0.1em;
+}
 .main-nav ul {
   display: none;
+	padding: 0;
+	list-style: none;
+	clear: both;
 }
-
+.main-nav:hover ul {
+	 display: block;
+}
 a {
   text-decoration: none;
   color: red;
