@@ -1,0 +1,49 @@
+.hamburger img {
+  width: 2em;
+  float: right;
+  padding: 5px;
+}
+.header-info {
+  background-color: rgba(255, 77, 61, 0.88);
+  padding: 20px;
+  text-align: center;
+}
+.portfolioImage {
+  width: 300px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: 1px solid darkgray;
+}
+.project-caption p {
+  font-size: .6em;
+  color: black;
+  font-weight: 100;
+  padding: 3px;
+}
+@media only screen and (min-width: 640px) {
+  .hamburger {
+    display: none;
+  }
+  .main-nav ul {
+    display: inline-block;
+  }
+  .portfolioImage {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  ul a {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .main-nav ul {
+    float: right;
+  }
+  .project-caption {
+    text-align: center;
+  }
+  .portfolioImage {
+    text-align: center;
+  }
+}
