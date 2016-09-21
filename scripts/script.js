@@ -20,10 +20,10 @@ Project.prototype.toHtml = function (){
 
   //build project entry
   $newProject.find('.title').text(this.title);
-  $newProject.find('.deployed').css('href', this.deployedUrl);
-  $newProject.find('.gitCode').css('href', this.githubUrl);
+  $newProject.find('.deployed').attr('href', this.deployedUrl);
+  $newProject.find('.gitCode').attr('href', this.githubUrl);
   $newProject.find('.skills').text(this.skills);
-  $newProject.find('.projectImage').css('src', this.projectImage);
+  $newProject.find('.projectImage').attr('src', this.projectImage);
 
   $newProject.removeClass('template');
   return $newProject;

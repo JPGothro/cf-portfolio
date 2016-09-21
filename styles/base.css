@@ -51,6 +51,9 @@ footer {
 .clearfix {
   clear: both;
 }
+.projectImage {
+  width: 50%;
+}
 /*#projects {
   background-color: rgba(255, 241, 240, 0.05);
 
