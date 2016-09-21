@@ -1,0 +1,46 @@
+
+
+//Excised text for reference
+
+<!-- Continental Philosophy Tube -->
+  <div class="project-caption">
+    <h4><a href="https://alfonsotech.github.io/Continental-Phil-Tube/" target="_blank">Continental Philosophy Tube</a></h4>
+    <p>HTML, CSS, Bootstrap, Javascipt, jQuery</p>
+
+    <a href="https://github.com/alfonsotech/Continental-Phil-Tube" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">View Project On GitHub</span></a>
+  </div><!--/.project-caption -->
+  <a href="https://alfonsotech.github.io/Continental-Phil-Tube/" target="_blank"><img class="portfolioImage" src="https://alfonsotech.github.io/alfonso-tech/project-images/cptube.png"></a>
+
+  <!-- MeetEmma -->
+  <div class="project-caption ">
+    <h4><a href="https://alfonsotech.github.io/meetEmma/" target="_blank">MeetEmma</a></h4>
+    <p>HTML, CSS, Bootstrap, Javascipt, jQuery</p>
+    <a href="https://github.com/alfonsotech/meetEmma" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">View Project On GitHub</span></a>
+  </div><!--/.project-caption -->
+  <a href="https://github.com/alfonsotech/meetEmma" target="_blank"><img class="portfolioImage" src="https://alfonsotech.github.io/alfonso-tech/project-images/meetEmma.png"></a>
+
+
+<!-- Philosophy Quiz -->
+<div class="project-caption">
+  <h4><a href="https://alfonsotech.github.io/philosophy-quiz-app/" target="_blank">Continental Philosophy Quiz</a></h4>
+  <p>HTML, CSS, Javascipt, jQuery</p>
+  <a href="https://github.com/alfonsotech/philosophy-quiz-app" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">View Project On GitHub</span></a>
+</div> <!--/.project-caption -->
+<a href="https://alfonsotech.github.io/philosophy-quiz-app/" target="_blank"><img class="portfolioImage" src="https://alfonsotech.github.io/alfonso-tech/project-images/cpquiz.png"></a>
+
+
+<!-- Hot || Cold Game -->
+<div class="project-caption ">
+    <h4><a href="https://alfonsotech.github.io/hot-cold-game/" target="_blank">Hot || Cold Game</a></h4>
+    <p>Javascipt, jQuery</p>
+    <a href="https://github.com/alfonsotech/hot-cold-game" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">View Project On GitHub</span></a>
+</div><!--/.project-caption -->
+<a href="https://alfonsotech.github.io/hot-cold-game/" target="_blank"><img class="portfolioImage" src="https://alfonsotech.github.io/alfonso-tech/project-images/hotcold-game.png"></a>
+
+ <!-- Pomodoro CLock -->
+<div class="project-caption ">
+  <h4><a href="https://alfonsotech.github.io/pomodoro-clock/" target="_blank">Pomodoro Clock</a></h4>
+  <p>HTML, CSS, Bootstrap, Javascipt, jQuery</p>
+  <a href="https://github.com/alfonsotech/pomodoro-clock" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">View Project On GitHub</span></a>
+</div><!--/.project-caption -->
+<a href="https://alfonsotech.github.io/pomodoro-clock/" target="_blank"><img class="portfolioImage" src="https://alfonsotech.github.io/alfonso-tech/project-images/pomodoro-clock3.png"></a>

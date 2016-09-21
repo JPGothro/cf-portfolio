@@ -4,7 +4,7 @@ var projectArray = [];
 
 //Create project entry objects using this object constructor
 function Project (data){
-  this.title = data.object;
+  this.title = data.title;
   this.githubUrl = data.githubUrl;
   this.deployedUrl = data.deployedUrl;
   this.skills = data.skills;
@@ -23,10 +23,20 @@ Project.prototype.toHtml = function (){
   $newProject.find('.deployed').css('href', this.deployedUrl);
   $newProject.find('.gitCode').css('href', this.githubUrl);
   $newProject.find('.skills').text(this.skills);
-  $newProject.find('.portfolioImage').css('src', this.projectImage);
+  $newProject.find('.projectImage').css('src', this.projectImage);
 
   $newProject.removeClass('template');
   return $newProject;
 };
 
+//Push built project entry into empty projectArray
+projects.forEach(function(entry) {
+  projectArray.push(new Project(entry));
+});
+console.log(projectArray);
+
 //Render to HTML
+projectArray.forEach(function(item){
+  console.log(item);
+  $('#projects').append(item.toHtml());
+});

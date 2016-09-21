@@ -28,9 +28,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body, section, div, ul, li {
-  outline: 1px dotted red;
-}
 body {
 	line-height: 1;
 }

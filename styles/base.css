@@ -1,3 +1,6 @@
+body, section, article, div, ul, li {
+  outline: 1px dotted red;
+}
 body {
   font-family: 'Playfair Display', 'Georgia', serif;
   font-size: 17px;
@@ -6,6 +9,10 @@ body {
   background-position: fixed;
   background-repeat:no-repeat;
   background-size: cover;*/
+}
+article {
+  margin: 10px;
+  padding: 10px 10px 15px 10px;
 }
 h1 {
   font-size: 2em;
@@ -35,6 +42,9 @@ li {
 }
 hr {
   width: 80%;
+}
+footer {
+  float: right;
 }
 .clearfix {
   clear: both;

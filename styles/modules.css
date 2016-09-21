@@ -3,6 +3,19 @@
   float: right;
   padding: 5px;
 }
+/*Hamburger Menu Hide/Show*/
+.main-nav {
+  padding: 0.1em;
+  }
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+.main-nav:hover ul {
+  display: block;
+}
 .header-info {
   background-color: rgba(255, 77, 61, 0.88);
   padding: 20px;
