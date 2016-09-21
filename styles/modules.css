@@ -17,9 +17,12 @@
   display: block;
 }
 .header-info {
-  background-color: rgba(255, 77, 61, 0.88);
+  background-color: rgba(255, 77, 61, 0.6);
   padding: 20px;
   text-align: center;
+}
+#hire {
+  background-color: rgba(255, 77, 61, 0.6);
 }
 .portfolioImage {
   width: 300px;
