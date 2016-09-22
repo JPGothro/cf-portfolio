@@ -25,10 +25,19 @@ Project.prototype.toHtml = function (){
   $newProject.find('.skills').text(this.skills);
   $newProject.find('.projectImage').attr('src', this.projectImage);
 
+  //add date created
+  $newProject.find('time[when]').attr('title', this.dateCreated);
+  $newProject.find('time').html('Created About ' + parseInt((new Date() - new Date(this.dateCreated)) / 60 / 60 / 24 / 1000) + ' days ago');
+  //remove template class from built entry
   $newProject.removeClass('template');
+  //return built project entry
   return $newProject;
 };
 
+//order projectArray chronologically
+projects.sort(function(this1, this2) {
+  return (new Date(this2.publishedOn)) - (new Date(this1.publishedOn));
+});
 //Push built project entry into empty projectArray
 projects.forEach(function(entry) {
   projectArray.push(new Project(entry));

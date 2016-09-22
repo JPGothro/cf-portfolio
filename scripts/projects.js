@@ -7,7 +7,7 @@ var projects = [
     skills: 'HTML, CSS, Bootstrap, Javascipt, jQuery',
     projectImage: 'images/cptube.png',
     description:'',
-    dateCreated:''
+    dateCreated:'2015-11-05'
   },
   {
     title: 'Continental Philosophy Quiz',
@@ -16,7 +16,7 @@ var projects = [
     skills: 'HTML, CSS, Javascipt, jQuery',
     projectImage: 'images/cpquiz.png',
     description:'',
-    dateCreated:''
+    dateCreated:'2015-11-04'
   },
   {
     title: 'Pomodoro Clock',
@@ -25,6 +25,6 @@ var projects = [
     skills: 'HTML, CSS, Bootstrap, Javascipt, jQuery',
     projectImage: 'images/pomodoro-clock3.png',
     description:'',
-    dateCreated:''
+    dateCreated:'2015-11-03'
   }
 ];
