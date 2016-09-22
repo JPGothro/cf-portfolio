@@ -84,7 +84,7 @@ footer {
   .main-nav ul {
     display: inline-block;
   }
-  ul a {
+  .main-nav li {
     display: inline-block;
   }
 }
