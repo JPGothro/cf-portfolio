@@ -8,9 +8,10 @@ body {
   /*color: #FFF1F0;*/
   /*background-color: #ccc;*/
   background-image: url("../images/orange-red-computer.jpg");
-  background-position: fixed;
+  background-position: top;
   background-repeat:no-repeat;
-  background-size: cover;
+  background-size:cover;
+  background-attachment: fixed;
 }
 article {
   margin: 10px;
@@ -50,9 +51,6 @@ footer {
 }
 .clearfix {
   clear: both;
-}
-.projectImage {
-  width: 50%;
 }
 /*#projects {
   background-color: rgba(255, 241, 240, 0.05);

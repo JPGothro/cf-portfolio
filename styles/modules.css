@@ -24,10 +24,10 @@
 #hire {
   background-color: rgba(255, 77, 61, 0.6);
 }
-.portfolioImage {
-  width: 300px;
-  margin-bottom: 30px;
-  margin-top: 10px;
+.projectImage {
+  width: 80%;
+  margin: 10px 10px 30px 0px;
+  display: flex;
   border: 1px solid darkgray;
 }
 .project-caption p {
@@ -36,17 +36,28 @@
   font-weight: 100;
   padding: 3px;
 }
+.title {
+  font-size: 1em;
+  margin-bottom: 3px;
+}
+.skills {
+  font-size: .75em;
+  margin-bottom: 5px;
+}
+.network-name, .gitCode {
+  font-size: .75em;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  background-color: rgba(255, 77, 61, 0.6);
+  padding: 3px;
+  border-radius:10%;
+}
 @media only screen and (min-width: 640px) {
   .hamburger {
     display: none;
   }
   .main-nav ul {
     display: inline-block;
-  }
-  .portfolioImage {
-    width: 300px;
-    margin: 0 auto;
-    display: block;
   }
   ul a {
     display: inline-block;
@@ -59,7 +70,7 @@
   .project-caption {
     text-align: center;
   }
-  .portfolioImage {
-    text-align: center;
+  .projectImage {
+    width: 60%;
   }
 }
