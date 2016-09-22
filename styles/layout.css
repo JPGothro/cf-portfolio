@@ -13,3 +13,17 @@
   top: 0;
   right: 0;
 }
+/*.section-title {
+	background-color: rgba(255, 77, 61, 0.6);
+	border: 1px solid rgba(255, 77, 61, 0.6);
+	border-radius: 1px;
+}*/
+article {
+	background-color: rgba(255, 255, 255, 0.2);
+	/*border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 3px;*/
+	padding: 20px 20px 30px 20px;
+}
+footer {
+	padding: 20px;
+}
