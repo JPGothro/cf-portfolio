@@ -1,6 +1,6 @@
-body, section, article, div, ul, li {
+/*body, section, article, div, ul, li {
   outline: 1px dotted red;
-}
+}*/
 body {
   font-family: 'Playfair Display', 'Georgia', serif;
   font-size: 17px;
