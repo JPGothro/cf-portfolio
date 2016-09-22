@@ -7,13 +7,13 @@
 .main-nav {
   padding: 0.1em;
   }
-.main-nav ul {
-  display: none;
+.main-nav li {
+  /*display: none;*/
   padding: 0;
   list-style: none;
   clear: both;
 }
-.main-nav:hover ul {
+.main-nav:hover li {
   display: block;
 }
 .header-info {
