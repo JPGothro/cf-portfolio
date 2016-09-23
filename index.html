@@ -13,17 +13,16 @@
 
 <!-- Handlebars Scripts-->
 <script id="article-template" type="text/x-handlebars-template">
-      <!-- <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
-        <header>
-          <h1>{{title}}</h1>
-          <div class="byline">
-            By <address><a href="{{authorUrl}}">{{author}}</a></address>
-            {{publishStatus}}
-          </div>
-        </header>
-        <section class="article-body">{{{body}}}</section>
-        <a href="#" class="read-on"> Read on &rarr;</a>
-      </article> -->
+
+      <article class="clearfix">
+
+        <h4 class="title">{{title}}</h4>
+        <p class="skills">{{skills}}</p>
+        <time when datetime="2000-01-01" title="2015-11-05">{{dateCreated}}</time>
+        <br>
+        <a class="deployed" href="{{deployedUrl}}" target="_blank"><img class="projectImage" src="{{projectImage}}"></a>
+        <a class="gitCode" href="{{githubUrl}}"  target="_blank"><i class="fa fa-github fa-fw"><<pseudo:before>></<pseudo:before>></i><span class="network-name">View Project On Github</span></a>
+      </article>
     </script>
 
   </head>
