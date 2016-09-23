@@ -2,10 +2,13 @@
 .hamburger img {
   width: 2em;
   float: right;
-  padding: 5px;
+  padding: .5em;
 }
 .main-nav {
   padding: 0.1em;
+  }
+  .main-nav li {
+    margin-top: .5em;
   }
 .main-nav ul {
   display: none;
@@ -18,8 +21,10 @@
 }
 .header-info {
   background-color: rgba(255, 77, 61, 0.6);
-  padding: 20px;
+  /*background-blend-mode: screen;*/
+  padding: 47px 10px 5px 10px;
   text-align: center;
+  border-bottom: .5px solid rgba(0, 0, 0, 0.2);
 }
 
 /*Projects*/
@@ -55,25 +60,17 @@ time {
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin-left: 10%;
 }
-/*.section-title {
-	background-color: rgba(255, 77, 61, 0.6);
-	border-radius: 1px;
-}*/
+.section-title {
+	text-shadow: .1px .1px rgb(255, 217, 214);
+  text-decoration: underline;
+  margin-bottom: .5em;
+}
+#project {
+  padding: 30px;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+}
 article {
-	background-color: rgba(255, 255, 255, 0.2);
-	/*border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 3px;*/
-	padding: 20px 20px 30px 20px;
-}
-
-/*Footer*/
-footer {
-	padding: 20px;
-}
-
-/*Hire Me*/
-#hire {
-  background-color: rgba(255, 77, 61, 0.6);
+  margin-bottom: 50px;
 }
 
 /*Media Queries*/

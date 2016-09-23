@@ -86,5 +86,22 @@ projectArray.forEach(function(item){
   $('#project').append(item.toHtml());
 });
 
+
+function animateHeader (){
+  $('h1').on('mouseenter', function(){
+    $('h1').text('.τέχνη(ἰδέα);');
+    $('h2').text('Sturdy Things From Ideas');
+  });
+  $('h1').on('mouseout', function(){
+    $('h1').text('A L F ◯ N S O');
+    $('h2').text('Web Development');
+  });
+}
+
+function hideSocial (){
+  $('footer').hide();
+}
+
 //call the funciton to handlel nav tabs
 projectArray.handleNavTabs();
+animateHeader ();
