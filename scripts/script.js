@@ -13,27 +13,7 @@ function Project (data){
   this.dateCreated = data.dateCreated;
 }
 
-//Build project entry using this object prototype
-Project.prototype.toHtml = function (){
-  //save cloned template to var
-  var $newProject = $('article.template').clone();
-
-  //build project entry
-  $newProject.find('.title').text(this.title);
-  $newProject.find('.deployed').attr('href', this.deployedUrl);
-  $newProject.find('.gitCode').attr('href', this.githubUrl);
-  $newProject.find('.skills').text(this.skills);
-  $newProject.find('.projectImage').attr('src', this.projectImage);
-
-  //add date created
-  $newProject.find('time[when]').attr('title', this.dateCreated);
-  $newProject.find('time').html('Created About ' + parseInt((new Date() - new Date(this.dateCreated)) / 60 / 60 / 24 / 1000) + ' days ago');
-  //remove template class from built entry
-  $newProject.removeClass('template');
-  //return built project entry
-  return $newProject;
-};
-
+//Set nav so that only section selected shows, beginning with the "About" section
 projectArray.handleNavTabs = function () {
   //click event handler for .nabtab inside .main-nav
   $('.main-nav').on('click', '.navtab', function () {
@@ -50,6 +30,44 @@ projectArray.handleNavTabs = function () {
     $(hash).show();
   });
   $('.main-nav .navtab:first').click();
+};
+
+//Build project entry using this object prototype
+Project.prototype.toHtml = function (){
+  //store location for insertion of populated template
+  var source = $('#article-template').html();
+  //Hnadlebars compiler function set to template var
+  var template = Handlebars.compile(source);
+
+  //build date created
+  this.daysAgo = parseInt((new Date() - new Date(this.dateCreated)) / 60 / 60 / 24 / 1000);
+
+  ///Build date created message: post date or "draft" status
+  this.publishStatus = this.dateCreated ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  //selected item to be inserted into html run through compiler is set to this var
+  var html = template(this);
+
+  //return build project item
+  return html;
+
+  // OLD CODE - JS/JQUERY TEMPLATING
+  //save cloned template to var
+  // var $newProject = $('article.template').clone();
+  //
+  // //build project entry
+  // $newProject.find('.title').text(this.title);
+  // $newProject.find('.deployed').attr('href', this.deployedUrl);
+  // $newProject.find('.gitCode').attr('href', this.githubUrl);
+  // $newProject.find('.skills').text(this.skills);
+  // $newProject.find('.projectImage').attr('src', this.projectImage);
+  //
+  // //add date created
+  // $newProject.find('time[when]').attr('title', this.dateCreated);
+  // $newProject.find('time').html('Created About ' + parseInt((new Date() - new Date(this.dateCreated)) / 60 / 60 / 24 / 1000) + ' days ago');
+  // //remove template class from built entry
+  // $newProject.removeClass('template');
+  // //return built project entry
+  // return $newProject;
 };
 
 //order projectArray chronologically
