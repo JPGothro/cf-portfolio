@@ -47,7 +47,7 @@ projectArray.handleNavTabs = function () {
 
     //hide all content and show only selected hash content
     $('.tab-content').not(hash).hide();
-    //$(hash).show();
+    $(hash).show();
   });
   $('.main-nav .navtab:first').click();
 };
@@ -65,7 +65,7 @@ console.log(projectArray);
 //Render to HTML
 projectArray.forEach(function(item){
   console.log(item);
-  $('#projects').append(item.toHtml());
+  $('#project').append(item.toHtml());
 });
 
 //call the funciton to handlel nav tabs
