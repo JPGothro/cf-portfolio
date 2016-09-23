@@ -22,7 +22,7 @@
 .header-info {
   background-color: rgba(255, 77, 61, 0.6);
   /*background-blend-mode: screen;*/
-  padding: 47px 10px 5px 10px;
+  padding: 20px 10px 5px 10px;
   text-align: center;
   border-bottom: .5px solid rgba(0, 0, 0, 0.2);
 }
@@ -47,10 +47,15 @@
   margin-bottom: 3px;
 }
 .skills {
+  color: black;
+}
+.skills {
   font-size: .75em;
+  margin-bottom: 0px;
 }
 time {
   font-size: .6em;
+
 }
 .gitCode {
   font-size: .75em;

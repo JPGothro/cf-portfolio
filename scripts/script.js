@@ -90,7 +90,7 @@ projectArray.forEach(function(item){
 function animateHeader (){
   $('h1').on('mouseenter', function(){
     $('h1').text('.τέχνη(ἰδέα);');
-    $('h2').text('Sturdy Things From Ideas');
+    $('h2').text('Sturdy Technology From Ideas');
   });
   $('h1').on('mouseout', function(){
     $('h1').text('A L F ◯ N S O');
