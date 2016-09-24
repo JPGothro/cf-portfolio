@@ -21,7 +21,6 @@
 }
 .header-info {
   background-color: rgba(255, 77, 61, 0.6);
-  /*background-blend-mode: screen;*/
   padding: 20px 10px 5px 10px;
   text-align: center;
   border-bottom: .5px solid rgba(0, 0, 0, 0.2);
@@ -85,19 +84,23 @@ article {
   }
   .main-nav ul {
     display: inline-block;
+    float: left;
   }
   .main-nav li {
     display: inline-block;
   }
 }
 @media only screen and (min-width: 850px) {
-  .main-nav ul {
-    float: right;
-  }
+
   .project-caption {
     text-align: center;
   }
   .projectImage {
     width: 60%;
+  }
+  #about, #project, #hire {
+    max-width: 640px;
+    margin: 0 auto;
+    display: block;
   }
 }
