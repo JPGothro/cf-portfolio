@@ -1,8 +1,9 @@
 'use strict';
-//Push project entries into this array
+
+//Push project entry objects into this array
 var projectArray = [];
 
-//Create project entry objects using this object constructor
+//Create project entry objects using object constructor with data parameter
 function Project (data){
   this.title = data.title;
   this.githubUrl = data.githubUrl;
@@ -13,41 +14,40 @@ function Project (data){
   this.dateCreated = data.dateCreated;
 }
 
-//Set nav so that only section selected shows, beginning with the "About" section
+//Set navigation so that only section selected shows, beginning with the "About" section
 projectArray.handleNavTabs = function () {
-  //click event handler for .nabtab inside .main-nav
+  //click event handler for navigation tabs
   $('.main-nav').on('click', '.navtab', function () {
-    //store this node in a variable
+    //store this object reference in a variable
     var $this = $(this);
-    //store this attribute node of d-content
+    //store attribute of d-content
     var $selectedNavtab = $this.attr('data-content');
-    //build hash to grab this
+    //build hash to grab d-content
     var hash = '#' + $selectedNavtab;
-    console.log('this item hash', hash);
-
-    //hide all content and show only selected hash content
+    //hide all content and show only selected tab's content
     $('.tab-content').not(hash).hide();
     $(hash).show();
   });
+  //begin by selecting/showing first tab
   $('.main-nav .navtab:first').click();
 };
 
-//Build project entry using this object prototype
+//Build project entry
 Project.prototype.toHtml = function (){
   //store location for insertion of populated template
   var source = $('#article-template').html();
-  //Hnadlebars compiler function set to template var
+  //Store Handlebars compiler method
   var template = Handlebars.compile(source);
 
   //build date created
   this.daysAgo = parseInt((new Date() - new Date(this.dateCreated)) / 60 / 60 / 24 / 1000);
-
   ///Build date created message: post date or "draft" status
   this.publishStatus = this.dateCreated ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-  //selected item to be inserted into html run through compiler is set to this var
+
+  //Compile "this" entry and set to variable
   var html = template(this);
 
-  //return build project item
+  //return built project item
   return html;
 
   // OLD CODE - JS/JQUERY TEMPLATING
@@ -69,24 +69,24 @@ Project.prototype.toHtml = function (){
   // //return built project entry
   // return $newProject;
 };
-
+//***QUESTION HERE AS TO ORDER***//
 //order projectArray chronologically
 projects.sort(function(this1, this2) {
   return (new Date(this2.publishedOn)) - (new Date(this1.publishedOn));
 });
-//Push built project entry into empty projectArray
+
+//push built/compiled project entries into empty projectArray
 projects.forEach(function(entry) {
   projectArray.push(new Project(entry));
 });
-console.log(projectArray);
 
-//Render to HTML
+//render to HTML
 projectArray.forEach(function(item){
-  console.log(item);
   $('#project').append(item.toHtml());
 });
 
-
+/*Helper Functions*/
+//animate header
 function animateHeader (){
   $('h1').on('mouseenter', function(){
     $('h1').text('.τέχνη(ἰδέα);');
@@ -98,10 +98,8 @@ function animateHeader (){
   });
 }
 
-function hideSocial (){
-  $('footer').hide();
-}
-
-//call the funciton to handlel nav tabs
+/*Function Calls*/
+//call the function to handle nav tabs
 projectArray.handleNavTabs();
+//animate header
 animateHeader ();

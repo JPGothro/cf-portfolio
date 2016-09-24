@@ -1,3 +1,22 @@
+/*Main CSS*/
+article {
+  margin-bottom: 50px;
+}
+.section-title {
+  margin-top: 0px;
+  margin-bottom: .5em;
+	text-shadow: .1px .1px rgb(255, 217, 214);
+  text-decoration: underline;
+}
+
+/*Header*/
+.header-info {
+  background-color: rgba(255, 77, 61, 0.6);
+  padding: 20px 10px 5px 10px;
+  text-align: center;
+  border-bottom: .5px solid rgba(0, 0, 0, 0.2);
+}
+
 /*Navigation*/
 .hamburger img {
   width: 2em;
@@ -7,7 +26,7 @@
 .main-nav {
   padding: 0.1em;
   }
-  .main-nav li {
+.main-nav li {
     margin-top: .5em;
   }
 .main-nav ul {
@@ -19,14 +38,11 @@
 .main-nav:hover ul {
   display: block;
 }
-.header-info {
-  background-color: rgba(255, 77, 61, 0.6);
-  padding: 20px 10px 5px 10px;
-  text-align: center;
-  border-bottom: .5px solid rgba(0, 0, 0, 0.2);
-}
 
 /*Projects*/
+#project {
+  padding: 30px;
+}
 .projectImage {
   width: 80%;
   margin: 10px 10px 15px 0px;
@@ -47,14 +63,11 @@
 }
 .skills {
   color: black;
-}
-.skills {
   font-size: .75em;
   margin-bottom: 0px;
 }
 time {
   font-size: .6em;
-
 }
 .gitCode {
   font-size: .75em;
@@ -63,18 +76,6 @@ time {
   border-radius:3px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin-left: 10%;
-}
-.section-title {
-	text-shadow: .1px .1px rgb(255, 217, 214);
-  text-decoration: underline;
-  margin-bottom: .5em;
-}
-#project {
-  padding: 30px;
-  /*background-color: rgba(255, 255, 255, 0.2);*/
-}
-article {
-  margin-bottom: 50px;
 }
 
 /*Media Queries*/
@@ -89,9 +90,11 @@ article {
   .main-nav li {
     display: inline-block;
   }
+  h3, .section-title {
+    margin-top: 50px;
+  }
 }
 @media only screen and (min-width: 850px) {
-
   .project-caption {
     text-align: center;
   }

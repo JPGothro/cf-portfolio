@@ -1,12 +1,7 @@
-/*body, section, article, div, ul, li {
-  outline: 1px dotted red;
-}*/
 body {
   font-family: 'Playfair Display', 'Georgia', serif;
   font-size: 17px;
   color: #1A1A1A;
-  /*color: #FFF1F0;*/
-  /*background-color: #ccc;*/
   background-image: url("../images/orange-red-computer.jpg");
   background-position: top;
   background-repeat:no-repeat;
@@ -49,10 +44,3 @@ li {
 hr {
   width: 80%;
 }
-.clearfix {
-  clear: both;
-}
-/*#projects {
-  background-color: rgba(255, 241, 240, 0.05);
-
-}*/
