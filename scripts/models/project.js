@@ -112,4 +112,5 @@ Project.fetchAll = function() {
       console.log('Error', error);
     };
   };
+
 };
