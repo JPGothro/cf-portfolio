@@ -1,7 +1,7 @@
 'use strict';
 
 //Push project entry objects into this array
-var projectArray = [];
+//var projectArray = [];
 
 //Create project entry objects using object constructor with data parameter
 function Project (data){
@@ -13,6 +13,38 @@ function Project (data){
   this.description = data.description;
   this.dateCreated = data.dateCreated;
 }
+//Place artcile set into a method on the constructor object
+Project.all = [];
+
+Project.fetchAll = function() {
+  if (localStorage.projects) {
+    var jsonData = JSON.parse(localStorage.projects);
+    Project.loadAll(jsonData);
+  } else {
+    $.ajax ('scripts/projects.json', {
+      method: 'GET',
+      success: successHandler,
+      error: errorHandler
+    });
+    function successHandler(data) {
+      Project.loadAll(data);
+      projectArray.renderIndexPage();
+      var dataString = JSON.stringify(data);
+      localStorage.setItem('projects', dataString);
+    }
+    function errorHandler(error) {
+      console.log('Error', error);
+    };
+  };
+};
+
+Project.loadAll = function(dataWePassIn) {
+  dataWePassIn.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  }).forEach(function(ele) {
+    Project.all.push(new Project(ele));
+  });
+};
 
 //Set navigation so that only section selected shows, beginning with the "About" section
 projectArray.handleNavTabs = function () {
