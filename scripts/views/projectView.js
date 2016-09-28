@@ -1,3 +1,4 @@
+'use strict';
 //empty object to attach view handlers
 var projectView = {};
 
