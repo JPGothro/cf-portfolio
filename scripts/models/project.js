@@ -16,7 +16,7 @@
 
 //New Object constructor
 function Project(opts) {
-  for (keys in opts){
+  for (var keys in opts){
     this[keys] = opts[keys];
   }
 }

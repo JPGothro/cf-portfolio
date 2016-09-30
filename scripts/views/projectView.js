@@ -38,7 +38,7 @@ projectView.renderIndexPage = function() {
 
   //render to HTML
   projectArray.forEach(function(item){
-    $('#project').append(item.toHtml());
+    $('#project').append(item.toHtml(scriptTemplateId));
   });
 };
 
