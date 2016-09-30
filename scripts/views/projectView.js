@@ -66,10 +66,9 @@ projectView.animateHeader = function() {
   });
 };
 
-/*Function Calls*/
+/*Function Calls - This ends up in the controller, right?*/
 //call all the methods on the projectView object
 Project.fetchAll();
+projectView.renderIndexPage();
 projectView.handleNavTabs();
 projectView.animateHeader();
-Project.fetchAll();
-projectView.renderIndexPage();

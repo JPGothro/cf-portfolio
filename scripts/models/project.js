@@ -34,8 +34,8 @@ function(scriptTemplateId) {
   ///Build date created message: post date or "draft" status
   this.publishStatus = this.dateCreated ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
-  //Add markup to project body
-  this.project = marked(this.project);
+  //Add markup to project description
+  this.description = marked(this.description);
 
   //return the template for project entry
   return template(this);
@@ -89,7 +89,7 @@ Project.loadAll = function(dataWePassIn) {
   });
 };
 
-//Retrieve data, process it, adn hand off to View
+//Retrieve data, process it, and hand off to View
 Project.fetchAll = function() {
   //if data is already in localStorage, parse into a js object and load that
   if (localStorage.projects) {
