@@ -24,21 +24,24 @@ projectView.handleNavTabs = function () {
 
 //***QUESTION HERE AS TO ORDER***//
 //order projectArray chronologically
-projects.sort(function(this1, this2) {
-  return (new Date(this2.publishedOn)) - (new Date(this1.publishedOn));
-});
+// projects.sort(function(this1, this2) {
+//   return (new Date(this2.publishedOn)) - (new Date(this1.publishedOn));
+// });
 
 //put all render code into a function that can be called
 projectView.renderIndexPage = function() {
+  var projectArray = [];
   //push built/compiled project entries into empty projectArray
   //????IS this still okay as is???????<=======================================
   Project.all.forEach(function(entry) {
+    console.log('entry', entry);
     projectArray.push(new Project(entry));
+    console.log('projectArray', projectArray);
   });
 
   //render to HTML
   projectArray.forEach(function(item){
-    $('#project').append(item.toHtml(scriptTemplateId));
+    $('#project').append(item.toHtml());
   });
 };
 
@@ -69,6 +72,5 @@ projectView.animateHeader = function() {
 /*Function Calls - This ends up in the controller, right?*/
 //call all the methods on the projectView object
 Project.fetchAll();
-projectView.renderIndexPage();
 projectView.handleNavTabs();
 projectView.animateHeader();

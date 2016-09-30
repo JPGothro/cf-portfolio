@@ -26,8 +26,8 @@ Project.all = [];
 
 //NEW build for project entry
 Project.prototype.toHtml =
-function(scriptTemplateId) {
-  var template = Handlebars.compile($(scriptTemplateId).text());
+function() {
+  var template = Handlebars.compile($('#article-template').text());
 
   //build date created
   this.daysAgo = parseInt((new Date() - new Date(this.dateCreated)) / 60 / 60 / 24 / 1000);
@@ -95,6 +95,7 @@ Project.fetchAll = function() {
   if (localStorage.projects) {
     var jsonData = JSON.parse(localStorage.projects);
     Project.loadAll(jsonData);
+    projectView.renderIndexPage();
     //otherwise make an ajax call to get data from json in data directory, process, and load
   } else {
     $.ajax('data/projects.json', {
