@@ -35,7 +35,7 @@ function(scriptTemplateId) {
   this.publishStatus = this.dateCreated ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
   //Add markup to project body
-  this.body = marked(this.body);
+  this.project = marked(this.project);
 
   //return the template for project entry
   return template(this);

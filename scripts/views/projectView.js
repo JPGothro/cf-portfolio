@@ -68,6 +68,8 @@ projectView.animateHeader = function() {
 
 /*Function Calls*/
 //call all the methods on the projectView object
+Project.fetchAll();
 projectView.handleNavTabs();
 projectView.animateHeader();
+Project.fetchAll();
 projectView.renderIndexPage();
